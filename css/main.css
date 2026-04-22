@@ -134,7 +134,9 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 .hero__img { flex: 1; position: relative; overflow: hidden; background: var(--negro); min-height: 0; }
 .hero__img-inner {
   width: 100%; height: 100%;
-  background: linear-gradient(160deg, #2a2218 0%, #1a1510 30%, #3a2f20 60%, #231f20 100%);
+  background:
+    linear-gradient(160deg, rgba(42,34,24,0.62) 0%, rgba(26,21,16,0.72) 30%, rgba(58,47,32,0.58) 60%, rgba(35,31,32,0.65) 100%),
+    url('../assets/images/cocktails/mocktail pic.png') center/cover no-repeat;
   transition: transform 8s ease;
 }
 .hero__img:hover .hero__img-inner { transform: scale(1.02); }
@@ -321,6 +323,43 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 .footer__social { display: flex; gap: 20px; }
 .footer__social a { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--topo); transition: color .25s; }
 .footer__social a:hover { color: var(--negro); }
+
+/* PANEL BACKGROUNDS */
+.h-panel.intro {
+  background:
+    linear-gradient(rgba(255,249,238,.88), rgba(255,249,238,.88)),
+    url('../assets/images/cocktails/vasocloseuppic2.png') center/cover no-repeat;
+}
+.h-panel.grid-panel {
+  background:
+    linear-gradient(rgba(255,249,238,.90), rgba(255,249,238,.90)),
+    url('../assets/images/cocktails/liquidopic.png') center/cover no-repeat;
+}
+.h-panel.quote-panel {
+  background:
+    linear-gradient(rgba(255,249,238,.80), rgba(255,249,238,.80)),
+    url('../assets/images/cocktails/bubblespic.png') center/cover no-repeat;
+}
+.h-panel.carta-panel {
+  background:
+    linear-gradient(rgba(255,249,238,.92), rgba(255,249,238,.92)),
+    url('../assets/images/cocktails/liquidpic3.png') center/cover no-repeat;
+}
+.h-panel.valores-panel {
+  background:
+    linear-gradient(rgba(255,249,238,.87), rgba(255,249,238,.87)),
+    url('../assets/images/cocktails/mocktail3.png') center/cover no-repeat;
+}
+.h-panel.reserva-panel {
+  background:
+    linear-gradient(rgba(255,249,238,.88), rgba(255,249,238,.88)),
+    url('../assets/images/cocktails/mocktail pic.png') center/cover no-repeat;
+}
+.h-panel.footer-panel {
+  background:
+    linear-gradient(rgba(255,249,238,.92), rgba(255,249,238,.92)),
+    url('../assets/images/cocktails/liquidopic.png') center/cover no-repeat;
+}
 
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
