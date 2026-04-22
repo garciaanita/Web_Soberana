@@ -343,9 +343,12 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 }
 .h-panel.quote-panel {
   background:
-    linear-gradient(rgba(255,249,238,.80), rgba(255,249,238,.80)),
+    linear-gradient(rgba(35,31,32,.76), rgba(35,31,32,.76)),
     url('../assets/images/cocktails/bubblespic.png') center/cover no-repeat;
+  color: var(--crema);
 }
+.h-panel.quote-panel .quote__text em { color: rgba(255,249,238,.55); }
+.h-panel.quote-panel .quote__attr    { color: rgba(255,249,238,.50); }
 .h-panel.carta-panel {
   background:
     linear-gradient(rgba(255,249,238,.92), rgba(255,249,238,.92)),
