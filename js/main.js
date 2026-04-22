@@ -24,16 +24,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const hScroll = document.getElementById('h-scroll');
 
   if (hScroll) {
-    // Check both axes: scrollLeft for desktop horizontal, scrollTop for mobile vertical
     hScroll.addEventListener('scroll', () => {
       nav.classList.toggle('is-scrolled', hScroll.scrollLeft > 60 || hScroll.scrollTop > 60);
     }, { passive: true });
 
-    // Wheel → horizontal scroll on desktop only; also handle trackpad deltaX
+    // Panel-by-panel navigation: find the nearest visible panel and move ±1
+    let wheelLock = false;
     hScroll.addEventListener('wheel', e => {
       if (window.innerWidth <= 768) return;
       e.preventDefault();
-      hScroll.scrollLeft += (e.deltaY + e.deltaX) * 1.5;
+      if (wheelLock) return;
+
+      const dir = (e.deltaY || e.deltaX) > 0 ? 1 : -1;
+      const panels = [...hScroll.querySelectorAll('.h-panel')];
+
+      // Current panel = the one whose left edge is closest to x=0 of viewport
+      let currentIdx = 0, minDist = Infinity;
+      panels.forEach((p, i) => {
+        const dist = Math.abs(p.getBoundingClientRect().left);
+        if (dist < minDist) { minDist = dist; currentIdx = i; }
+      });
+
+      const nextIdx = Math.max(0, Math.min(panels.length - 1, currentIdx + dir));
+      if (nextIdx === currentIdx) return;
+
+      wheelLock = true;
+      hScroll.scrollTo({
+        left: hScroll.scrollLeft + panels[nextIdx].getBoundingClientRect().left,
+        behavior: 'smooth'
+      });
+      setTimeout(() => { wheelLock = false; }, 900);
     }, { passive: false });
   }
 
@@ -66,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
-  }, { root: hScroll, threshold: 0.08, rootMargin: '0px 0px -10px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -10px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // CARTA FILTER

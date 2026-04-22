@@ -57,7 +57,6 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
@@ -335,11 +334,12 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 @media (max-width: 768px) {
   html, body { overflow: auto; height: auto; }
   .h-scroll { flex-direction: column; overflow-x: hidden; overflow-y: auto; scroll-snap-type: y proximity; height: auto; }
-  .h-panel, .h-panel--wide, .h-panel--carta { width: 100vw; height: auto; min-height: 100svh; overflow-y: visible; }
+  .h-panel, .h-panel--wide, .h-panel--carta { width: 100vw; height: auto; min-height: 100vh; min-height: 100svh; overflow-y: visible; }
+  .hero__img { min-height: 55vh; min-height: 55svh; }
   .nav__left, .nav__right { display: none; }
-  .nav { grid-template-columns: auto 1fr auto; }
-  .nav__center { justify-content: flex-start; }
-  .nav__burger { display: flex; }
+  .nav { grid-template-columns: 40px 1fr 40px; }
+  .nav__center { grid-column: 2; justify-content: center; }
+  .nav__burger { grid-column: 3; grid-row: 1; display: flex; justify-self: end; }
   .h-panel.intro { flex-direction: column; padding: calc(44px + 60px) var(--pad) 60px; }
   .h-panel.grid-panel { overflow-y: visible; padding: calc(44px + 40px) var(--pad) 40px; }
   .grid__row { grid-template-columns: 1fr 1fr; }
