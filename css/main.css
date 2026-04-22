@@ -327,9 +327,15 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 /* PANEL BACKGROUNDS */
 .h-panel.intro {
   background:
-    linear-gradient(rgba(255,249,238,.88), rgba(255,249,238,.88)),
+    linear-gradient(rgba(35,31,32,.76), rgba(35,31,32,.76)),
     url('../assets/images/cocktails/vasocloseuppic2.png') center/cover no-repeat;
+  color: var(--crema);
 }
+.h-panel.intro .intro__index      { color: rgba(255,249,238,.55); }
+.h-panel.intro .intro__title em   { color: rgba(255,249,238,.55); }
+.h-panel.intro .intro__body       { color: rgba(255,249,238,.65); }
+.h-panel.intro .intro__link       { color: var(--crema); border-color: rgba(255,249,238,.45); }
+.h-panel.intro .intro__link:hover { color: rgba(255,249,238,.6); border-color: transparent; }
 .h-panel.grid-panel {
   background:
     linear-gradient(rgba(255,249,238,.90), rgba(255,249,238,.90)),
@@ -347,9 +353,15 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 }
 .h-panel.valores-panel {
   background:
-    linear-gradient(rgba(255,249,238,.87), rgba(255,249,238,.87)),
+    linear-gradient(rgba(35,31,32,.76), rgba(35,31,32,.76)),
     url('../assets/images/cocktails/mocktail3.png') center/cover no-repeat;
+  color: var(--crema);
 }
+.h-panel.valores-panel .valores__title em  { color: rgba(255,249,238,.55); }
+.h-panel.valores-panel .valores__intro     { color: rgba(255,249,238,.65); }
+.h-panel.valores-panel .valores__card      { background: rgba(35,31,32,.55); border: 1px solid rgba(255,249,238,.08); }
+.h-panel.valores-panel .valores__card-num  { color: rgba(255,249,238,.45); }
+.h-panel.valores-panel .valores__card-body { color: rgba(255,249,238,.65); }
 .h-panel.reserva-panel {
   background:
     linear-gradient(rgba(255,249,238,.88), rgba(255,249,238,.88)),
