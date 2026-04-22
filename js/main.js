@@ -28,17 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.toggle('is-scrolled', hScroll.scrollLeft > 60 || hScroll.scrollTop > 60);
     }, { passive: true });
 
-    // Panel-by-panel navigation: find the nearest visible panel and move ±1
+    // Panel-by-panel navigation with momentum-safe lock
     let wheelLock = false;
+    let wheelEndTimer = null;
+
     hScroll.addEventListener('wheel', e => {
       if (window.innerWidth <= 768) return;
       e.preventDefault();
+
+      // Reset lock only when wheel events stop for 400ms (end of trackpad momentum)
+      clearTimeout(wheelEndTimer);
+      wheelEndTimer = setTimeout(() => { wheelLock = false; }, 400);
+
       if (wheelLock) return;
 
       const dir = (e.deltaY || e.deltaX) > 0 ? 1 : -1;
       const panels = [...hScroll.querySelectorAll('.h-panel')];
 
-      // Current panel = the one whose left edge is closest to x=0 of viewport
       let currentIdx = 0, minDist = Infinity;
       panels.forEach((p, i) => {
         const dist = Math.abs(p.getBoundingClientRect().left);
@@ -53,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         left: hScroll.scrollLeft + panels[nextIdx].getBoundingClientRect().left,
         behavior: 'smooth'
       });
-      setTimeout(() => { wheelLock = false; }, 900);
     }, { passive: false });
   }
 
