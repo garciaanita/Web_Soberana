@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Soberana — Bar de mocktails premium en Madrid. Coctelería sin alcohol de autor." />
+  <title>Soberana — Bar de Mocktails · Madrid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Mono:wght@300;400&display=swap" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__left">
+    <a href="#carta">Carta</a>
+    <a href="#nosotros">Nosotros</a>
+  </div>
+  <div class="nav__center">
+    <a href="#inicio" class="nav__logo" aria-label="Soberana">
+      <svg viewBox="0 0 887.25 193.87" xmlns="http://www.w3.org/2000/svg">
+        <g fill="currentColor">
+          <path d="M37.01,147.79c-6.26-2.05-11.85-4.94-16.76-8.69v-20.89h.88c4.68,6.67,10,11.7,15.97,15.09,5.97,3.4,12.29,5.09,18.96,5.09,4.45,0,8.57-.79,12.37-2.37,3.8-1.58,6.82-3.86,9.04-6.85,2.22-2.98,3.33-6.58,3.33-10.79s-1.29-7.75-3.86-10.62c-2.58-2.87-6.73-5.59-12.46-8.16l-17.03-7.55c-8.19-3.74-14.28-8.34-18.25-13.78-3.98-5.44-5.97-11.61-5.97-18.52,0-6.43,1.76-12.34,5.27-17.73,3.51-5.38,8.4-9.62,14.66-12.73,6.26-3.1,13.31-4.65,21.15-4.65,5.85,0,11.44.76,16.76,2.28,5.32,1.52,9.86,3.51,13.6,5.97v20.19h-.88c-3.4-5.38-7.64-9.42-12.73-12.11-5.09-2.69-10.62-4.04-16.59-4.04-7.14,0-12.99,1.73-17.55,5.18-4.56,3.45-6.85,8.28-6.85,14.48,0,3.98,1.2,7.52,3.6,10.62,2.4,3.1,6.35,5.88,11.85,8.34l17.38,7.9c8.42,3.86,14.71,8.31,18.87,13.34,4.15,5.03,6.23,11.18,6.23,18.43s-1.84,13.05-5.53,18.43c-3.69,5.38-8.72,9.6-15.1,12.64-6.38,3.04-13.43,4.56-21.15,4.56-6.55,0-12.96-1.03-19.22-3.07Z"/>
+          <path d="M239.93,137.52c.82-3.98,1.23-9.3,1.23-15.97V53.97c0-6.67-.41-11.99-1.23-15.97-.82-3.98-2.28-7.49-4.39-10.53v-.7h45.11c9.13,0,16.85,1.23,23.17,3.69s11.09,5.91,14.31,10.36c3.22,4.45,4.83,9.6,4.83,15.45,0,7.02-2.46,13.05-7.37,18.08-4.91,5.03-11.53,8.42-19.83,10.18v.7c10.53,1.4,18.75,4.83,24.66,10.27,5.91,5.44,8.86,11.97,8.86,19.57,0,6.2-1.73,11.85-5.18,16.94-3.45,5.09-8.54,9.16-15.27,12.2-6.73,3.04-14.72,4.56-23.96,4.56h-49.32v-.7c2.11-3.04,3.57-6.55,4.39-10.53ZM292.41,77.06c3.98-1.58,7.02-3.95,9.13-7.11,2.11-3.16,3.16-7.08,3.16-11.76,0-6.32-2.34-11.17-7.02-14.57-4.68-3.39-11.29-5.09-19.83-5.09h-19.48v40.9h19.31c5.85,0,10.76-.79,14.74-2.37ZM258.36,137h20.89c6.43,0,12.02-.85,16.76-2.54,4.74-1.7,8.4-4.3,10.97-7.81,2.57-3.51,3.86-7.84,3.86-12.99,0-7.49-2.81-13.1-8.42-16.85-5.62-3.74-13.69-5.62-24.22-5.62h-19.83v45.81Z"/>
+          <path d="M426.56,148.76h-87.59v-.7c2.11-3.04,3.57-6.52,4.39-10.44.82-3.92,1.23-9.27,1.23-16.06V53.8c0-6.79-.38-12.17-1.14-16.15-.76-3.98-2.25-7.37-4.48-10.18v-.7h85.3v20.54h-.88c-2.22-3.16-5.33-5.35-9.3-6.58-3.98-1.23-9.83-1.84-17.55-1.84h-34.75v42.13h26.68c6.79,0,11.99-.53,15.62-1.58,3.63-1.05,6.55-2.69,8.78-4.91h.88v24.92h-.88c-2.11-2.34-5-4.01-8.69-5-3.69-.99-8.92-1.49-15.71-1.49h-26.68v43.71h37.21c7.25,0,12.96-.76,17.11-2.28,4.15-1.52,7.34-4.33,9.57-8.43h.88v22.82Z"/>
+          <path d="M442.36,137.61c.82-3.92,1.23-9.33,1.23-16.24V53.62c0-6.67-.38-11.99-1.14-15.97-.76-3.98-2.25-7.37-4.48-10.18v-.7h42.65c8.78,0,16.38,1.32,22.82,3.95,6.43,2.63,11.35,6.35,14.74,11.15,3.39,4.8,5.09,10.36,5.09,16.67s-1.73,11.7-5.18,16.5c-3.45,4.8-8.42,8.57-14.92,11.32-6.49,2.75-14.13,4.12-22.91,4.12l-2.11-.35,13.52-1.93,50.02,60.21v.35h-22.29l-46.16-57.57h-12.64v30.19c0,6.91.41,12.32,1.23,16.24.82,3.92,2.28,7.4,4.39,10.44v.7h-28.26v-.7c2.11-3.04,3.57-6.52,4.39-10.44ZM498,73.81c4.68-3.63,7.02-8.66,7.02-15.09s-2.31-11.7-6.93-15.1c-4.62-3.39-11.44-5.09-20.45-5.09h-17.03v40.72h16.85c9.01,0,15.85-1.81,20.54-5.44Z"/>
+          <path d="M539.91,139.28c1.69-3.39,3.83-8.42,6.41-15.09.23-.58.38-.99.44-1.23.06-.23.2-.64.44-1.23l37.21-94.96h15.1l37.91,94.08c.7,1.52,1.34,3.1,1.93,4.74,2.57,6.44,4.62,11.21,6.14,14.3,1.52,3.1,3.39,5.82,5.62,8.16v.7h-29.14v-.7c1.64-2.81,2.16-6.43,1.58-10.88-.59-4.45-2.05-9.65-4.39-15.62l-29.14-73.37h-.7l-28.43,73.72c-2.34,6.09-3.75,11.26-4.21,15.53-.47,4.27.18,7.81,1.93,10.62v.7h-25.1v-.7c2.57-2.46,4.71-5.38,6.41-8.78ZM560.01,100.14h58.62v12.11h-58.62v-12.11Z"/>
+          <path d="M662.32,137.7c.76-3.98,1.14-9.36,1.14-16.15V33.61l-4.04-6.49v-.35h24.45l61.61,97.42h1.88V53.8c0-6.79-.38-12.17-1.14-16.15-.76-3.98-2.25-7.37-4.48-10.18v-.7h24.57v.7c-2.11,2.93-3.57,6.38-4.39,10.36-.82,3.98-1.23,9.3-1.23,15.97v94.96h-18.25l-64.59-101.63h-.88v74.42c0,6.67.41,12.02,1.23,16.06.82,4.04,2.28,7.52,4.39,10.44v.7h-24.57v-.7c2.11-2.92,3.54-6.38,4.3-10.36Z"/>
+          <path d="M775.06,139.28c1.69-3.39,3.83-8.42,6.41-15.09.23-.58.38-.99.44-1.23.06-.23.2-.64.44-1.23l37.21-94.96h15.1l37.91,94.08c.7,1.52,1.34,3.1,1.93,4.74,2.57,6.44,4.62,11.21,6.14,14.3,1.52,3.1,3.39,5.82,5.62,8.16v.7h-29.14v-.7c1.64-2.81,2.16-6.43,1.58-10.88-.59-4.45-2.05-9.65-4.39-15.62l-29.14-73.37h-.7l-28.43,73.72c-2.34,6.09-3.75,11.26-4.21,15.53-.47,4.27.18,7.81,1.93,10.62v.7h-25.1v-.7c2.57-2.46,4.71-5.38,6.41-8.78ZM795.16,100.14h58.62v12.11h-58.62v-12.11Z"/>
+          <path d="M121.25,69.41v36.7h-2.03c-9.15,0-14.23-6.46-14.23-18.09v-.52c0-11.63,5.08-18.09,14.23-18.09h2.03ZM137.52,48.74v2.58c0,11.63-5.09,18.09-14.23,18.09h-2.03v-2.58c0-11.63,5.08-18.09,14.23-18.09h2.04ZM135.49,126.79c-9.15,0-14.23-6.46-14.23-18.09v-2.58h2.03c9.15,0,14.23,6.46,14.23,18.09v2.58h-2.04ZM180.21,26.77c9.15,0,14.23,6.46,14.23,18.09v3.88h-56.93v-3.88c0-11.63,5.08-18.09,14.23-18.09h28.46ZM194.45,126.79v3.88c0,11.63-5.08,18.09-14.23,18.09h-28.46c-9.15,0-14.23-6.46-14.23-18.09v-3.88h56.93ZM196.48,48.74c9.15,0,14.23,6.46,14.23,18.09v2.58h-2.03c-9.15,0-14.23-6.46-14.23-18.09v-2.58h2.03ZM210.71,106.11v2.58c0,11.63-5.08,18.09-14.23,18.09h-2.03v-2.58c0-11.63,5.08-18.09,14.23-18.09h2.03ZM212.75,69.41c9.15,0,14.23,6.46,14.23,18.09v.52c0,11.63-5.08,18.09-14.23,18.09h-2.03v-36.7h2.03Z"/>
+          <path d="M149.35,105.4c.64-13.22,8.9-24.6,20.08-31.06,3.99-2.21,8.5-3.85,13.19-4.22-.09,4.71-1.47,9.31-3.44,13.42-5.8,11.54-16.67,20.45-29.83,21.86h0Z"/>
+        </g>
+      </svg>
+    </a>
+  </div>
+  <div class="nav__right">
+    <a href="#experiencia">Experiencia</a>
+    <a href="#reserva" class="nav__cta">Reservar</a>
+  </div>
+  <button class="nav__burger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav__mobile">
+  <a href="#carta">Carta</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#experiencia">Experiencia</a>
+  <a href="#reserva">Reservar</a>
+</div>
+
+<!-- SCROLL HORIZONTAL -->
+<div class="h-scroll" id="h-scroll">
+
+  <!-- PANEL 1: HERO -->
+  <section class="h-panel hero" id="inicio">
+    <div class="hero__img">
+      <div class="hero__img-inner"></div>
+      <div class="hero__img-text">
+        <h1 class="hero__img-label">Libre de<br/>lo que <em>enturbia.</em></h1>
+        <p class="hero__img-sub">Coctelería sin alcohol<br/>de autor · Madrid</p>
+      </div>
+    </div>
+    <div class="hero__strip">
+      <div class="hero__strip-item">
+        <p class="hero__strip-label">Especialidad</p>
+        <p class="hero__strip-value">Mocktails de autor</p>
+      </div>
+      <div class="hero__strip-item hero__strip-center">
+        <p class="hero__strip-label">Ubicación</p>
+        <p class="hero__strip-value">Malasaña · Madrid</p>
+      </div>
+      <div class="hero__strip-item hero__strip-right">
+        <p class="hero__strip-label">Horario</p>
+        <p class="hero__strip-value">Mar–Dom · 18–02h</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 2: INTRO -->
+  <section class="h-panel intro" id="nosotros">
+    <div class="intro__left">
+      <p class="intro__index reveal">Sobre nosotros</p>
+      <h2 class="intro__title reveal d1">El bar<br/>que<br/><em>faltaba.</em></h2>
+    </div>
+    <div class="intro__right">
+      <p class="intro__body reveal d1">Soberana nació de una pregunta simple: ¿por qué quien no bebe alcohol tiene que conformarse con lo que sobra? Aquí no sobra nada. Cada mocktail parte de un ingrediente con historia, elaborado con la misma ambición técnica y creativa que la mejor coctelería de autor.</p>
+      <p class="intro__body reveal d2">Sin alcohol. Sin concesiones. Ingredientes con nombre y origen. Procesos visibles. Una carta que cambia con la temporada y con lo que el mercado nos trae cada semana.</p>
+      <a href="#carta" class="intro__link reveal d3">Ver la carta</a>
+    </div>
+  </section>
+
+  <!-- PANEL 3: GALERÍA -->
+  <section class="h-panel h-panel--wide grid-panel">
+    <div class="grid__row">
+      <div>
+        <div class="grid__cell grid__cell--sq reveal">
+          <div class="grid__img" style="background:linear-gradient(145deg,#4a1515,#8a2020);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">001</span><span class="grid__caption-name">Fresa</span></div>
+      </div>
+      <div>
+        <div class="grid__cell grid__cell--sq reveal d1">
+          <div class="grid__img" style="background:linear-gradient(145deg,#1a3a1a,#3a6a3a);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">002</span><span class="grid__caption-name">Kiwi</span></div>
+      </div>
+      <div>
+        <div class="grid__cell grid__cell--sq reveal d2">
+          <div class="grid__img" style="background:linear-gradient(145deg,#5a2020,#9a3030);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">003</span><span class="grid__caption-name">Pomelo</span></div>
+      </div>
+      <div>
+        <div class="grid__cell grid__cell--sq reveal d3">
+          <div class="grid__img" style="background:linear-gradient(145deg,#4a1010,#7a1a1a);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">004</span><span class="grid__caption-name">Sandía</span></div>
+      </div>
+    </div>
+    <div class="grid__text">
+      <p class="reveal">Soberana trabaja con ingredientes de origen verificable y técnicas de elaboración propias para crear bebidas sin alcohol de complejidad equivalente a la mejor coctelería de autor.</p>
+    </div>
+    <div class="grid__row grid__row--3">
+      <div>
+        <div class="grid__cell grid__cell--wide reveal">
+          <div class="grid__img" style="background:linear-gradient(145deg,#3a2a10,#6a4a20);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">005</span><span class="grid__caption-name">Botánico ámbar</span></div>
+      </div>
+      <div>
+        <div class="grid__cell grid__cell--wide reveal d1">
+          <div class="grid__img" style="background:linear-gradient(145deg,#2a1a10,#4a2a18);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">006</span><span class="grid__caption-name">Botánicos secos</span></div>
+      </div>
+      <div>
+        <div class="grid__cell grid__cell--wide reveal d2">
+          <div class="grid__img" style="background:linear-gradient(145deg,#2a3a10,#4a5a20);"></div>
+        </div>
+        <div class="grid__caption"><span class="grid__caption-num">007</span><span class="grid__caption-name">Verde · temporada</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 4: QUOTE -->
+  <div class="h-panel quote-panel">
+    <div class="quote__inner">
+      <p class="quote__text reveal">"El placer no necesita <em>anestesia.</em><br/>La mejor noche es la que recuerdas entera."</p>
+      <p class="quote__attr reveal d1">Soberana · Madrid</p>
+    </div>
+  </div>
+
+  <!-- PANEL 5: CARTA -->
+  <section class="h-panel h-panel--carta carta-panel" id="carta">
+    <div class="carta__header">
+      <h2 class="carta__title">Carta</h2>
+      <span class="carta__season">Temporada actual</span>
+    </div>
+    <div class="carta__filters">
+      <button class="carta__filter-btn active" data-filter="all">Todos</button>
+      <button class="carta__filter-btn" data-filter="botanico">Botánico</button>
+      <button class="carta__filter-btn" data-filter="fermentado">Fermentado</button>
+      <button class="carta__filter-btn" data-filter="adaptogeno">Adaptógeno</button>
+      <button class="carta__filter-btn" data-filter="clasico">Clásico</button>
+    </div>
+    <div class="carta__list">
+
+      <article class="carta__item" data-cat="botanico">
+        <span class="carta__num">01</span>
+        <div><h3 class="carta__name">La Fundadora</h3><p class="carta__desc">Pepino prensado en frío · Kombucha de jengibre · Lima · Sirope de albahaca · Sal en flor</p><div class="carta__pills"><span class="carta__pill">Botánico</span><span class="carta__pill">Probiótico</span><span class="carta__pill">Refrescante</span></div></div>
+        <span class="carta__price">12€</span>
+      </article>
+
+      <article class="carta__item" data-cat="adaptogeno">
+        <span class="carta__num">02</span>
+        <div><h3 class="carta__name">Ashwa Sour</h3><p class="carta__desc">Ashwagandha · Aquafaba · Limón · Miel cruda · Cúrcuma</p><div class="carta__pills"><span class="carta__pill">Adaptógeno</span><span class="carta__pill">Cortisol</span><span class="carta__pill">Espumoso</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="botanico">
+        <span class="carta__num">03</span>
+        <div><h3 class="carta__name">Collagen Bloom</h3><p class="carta__desc">Colágeno marino · Agua de rosa · Pomelo rosa · Kombucha de hibisco · Pétalos</p><div class="carta__pills"><span class="carta__pill">Floral</span><span class="carta__pill">Colágeno</span><span class="carta__pill">Vitamina C</span></div></div>
+        <span class="carta__price">14€</span>
+      </article>
+
+      <article class="carta__item" data-cat="adaptogeno">
+        <span class="carta__num">04</span>
+        <div><h3 class="carta__name">Reishi & Smoke</h3><p class="carta__desc">Cold brew de reishi · Vainilla negra · Agua ahumada · Naranja amarga · Soda</p><div class="carta__pills"><span class="carta__pill">Adaptógeno</span><span class="carta__pill">Ahumado</span><span class="carta__pill">Relajante</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="clasico">
+        <span class="carta__num">05</span>
+        <div><h3 class="carta__name">Seedlip Botanica</h3><p class="carta__desc">Seedlip Spice 94 · Vermut sin alcohol Lyre's · Bitter vegetal · Naranja · Tomillo</p><div class="carta__pills"><span class="carta__pill">Destilado</span><span class="carta__pill">0 cal</span></div></div>
+        <span class="carta__price">12€</span>
+      </article>
+
+      <article class="carta__item" data-cat="fermentado">
+        <span class="carta__num">06</span>
+        <div><h3 class="carta__name">Kvass del Mercado</h3><p class="carta__desc">Kvass de remolacha y centeno · Manzana prensada · Jengibre · Romero</p><div class="carta__pills"><span class="carta__pill">Fermentado</span><span class="carta__pill">Probiótico</span><span class="carta__pill">Temporada</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="clasico">
+        <span class="carta__num">07</span>
+        <div><h3 class="carta__name">Schisandra Negroni</h3><p class="carta__desc">Infusión de schisandra · Aperitivo Crodino · Bitter vegetal · Piel de pomelo flameada</p><div class="carta__pills"><span class="carta__pill">5 sabores</span><span class="carta__pill">Antioxidante</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="botanico">
+        <span class="carta__num">08</span>
+        <div><h3 class="carta__name">La Despedida</h3><p class="carta__desc">Cold brew de lavanda y manzanilla · Sirope de tonka · Leche de almendra · Espuma de miel</p><div class="carta__pills"><span class="carta__pill">Nocturno</span><span class="carta__pill">Ansiolítico</span><span class="carta__pill">Digestivo</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="fermentado">
+        <span class="carta__num">09</span>
+        <div><h3 class="carta__name">Hibiscus Kefir Fizz</h3><p class="carta__desc">Kéfir de agua con hibisco · Frambuesa · Limón · Miel silvestre · Soda de bergamota · Flores</p><div class="carta__pills"><span class="carta__pill">Fermentado</span><span class="carta__pill">Probiótico</span><span class="carta__pill">Vitamina C</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="clasico">
+        <span class="carta__num">10</span>
+        <div><h3 class="carta__name">Ceder & Tonic</h3><p class="carta__desc">Ceder Hill · Tónica Fever-Tree · Pepino · Enebro · Lima · Romero</p><div class="carta__pills"><span class="carta__pill">Destilado</span><span class="carta__pill">Botánico</span><span class="carta__pill">Digestivo</span></div></div>
+        <span class="carta__price">12€</span>
+      </article>
+
+      <article class="carta__item" data-cat="adaptogeno">
+        <span class="carta__num">11</span>
+        <div><h3 class="carta__name">Maca Horchata</h3><p class="carta__desc">Horchata de chufa artesanal · Maca en polvo · Canela de Ceilán · Cardamomo · Sirope de dátil</p><div class="carta__pills"><span class="carta__pill">Adaptógeno</span><span class="carta__pill">Energía</span><span class="carta__pill">Sin azúcar</span></div></div>
+        <span class="carta__price">12€</span>
+      </article>
+
+      <article class="carta__item" data-cat="botanico">
+        <span class="carta__num">12</span>
+        <div><h3 class="carta__name">Yuzu & Shiso</h3><p class="carta__desc">Zumo de yuzu · Agua de coco joven · Sirope de shiso morado · Soda japonesa · Microhierbas</p><div class="carta__pills"><span class="carta__pill">Floral</span><span class="carta__pill">Vitamina C</span><span class="carta__pill">Electrolitos</span></div></div>
+        <span class="carta__price">14€</span>
+      </article>
+
+      <article class="carta__item" data-cat="botanico">
+        <span class="carta__num">13</span>
+        <div><h3 class="carta__name">Aloe & Elderflower</h3><p class="carta__desc">Gel de aloe vera puro · Cordial de flor de saúco · Uva blanca · Agua de azahar · Soda</p><div class="carta__pills"><span class="carta__pill">Prebiótico</span><span class="carta__pill">Antiviral</span><span class="carta__pill">Antiinflamatorio</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+      <article class="carta__item" data-cat="fermentado">
+        <span class="carta__num">14</span>
+        <div><h3 class="carta__name">Amazake Dream</h3><p class="carta__desc">Amazake de koji · Leche de avena artesanal · Sirope de sakura · Jengibre · Sésamo negro</p><div class="carta__pills"><span class="carta__pill">Koji</span><span class="carta__pill">Enzimas</span><span class="carta__pill">IG bajo</span></div></div>
+        <span class="carta__price">13€</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PANEL 6: VALORES -->
+  <section class="h-panel valores-panel" id="experiencia">
+    <div class="valores__header">
+      <h2 class="valores__title reveal">Por qué<br/><em>Soberana.</em></h2>
+      <p class="valores__intro reveal d1">No somos la alternativa para quien no puede beber. Somos la elección de quien ha decidido que puede disfrutar más sin. La noche entera. La conversación entera. La mañana siguiente entera.</p>
+    </div>
+    <div class="valores__grid">
+      <div class="valores__card reveal">
+        <div class="valores__card-line"></div>
+        <p class="valores__card-num">01 — Origen</p>
+        <h3 class="valores__card-title">Ingrediente<br/>con nombre</h3>
+        <p class="valores__card-body">Cada ingrediente de nuestra carta tiene origen verificable. Sabemos de dónde viene, quién lo cultiva y por qué lo elegimos. La transparencia no es un atributo funcional: es una postura estética y ética.</p>
+      </div>
+      <div class="valores__card reveal d1">
+        <div class="valores__card-line"></div>
+        <p class="valores__card-num">02 — Técnica</p>
+        <h3 class="valores__card-title">Sin alcohol.<br/>Sin concesiones.</h3>
+        <p class="valores__card-body">Destilación al vacío, fermentación controlada, cold brew botánico. Los mismos estándares de la alta coctelería aplicados a un producto que no necesita el alcohol para ser extraordinario.</p>
+      </div>
+      <div class="valores__card reveal d2">
+        <div class="valores__card-line"></div>
+        <p class="valores__card-num">03 — Comunidad</p>
+        <h3 class="valores__card-title">Presencia<br/>consciente</h3>
+        <p class="valores__card-body">La elección sin alcohol como norma, no como excepción. Un espacio para quien ha decidido que el disfrute no necesita mediación química.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 7: RESERVA -->
+  <section class="h-panel reserva-panel" id="reserva">
+    <div class="reserva__left">
+      <p class="reserva__index reveal">Reserva</p>
+      <h2 class="reserva__title reveal d1">Tu mesa<br/>te espera.</h2>
+      <div class="reserva__info reveal d2">
+        <div class="reserva__info-row">
+          <span class="reserva__info-key">Dirección</span>
+          <span class="reserva__info-val">Calle de ejemplo, 14<br/>Malasaña · Madrid</span>
+        </div>
+        <div class="reserva__info-row">
+          <span class="reserva__info-key">Horario</span>
+          <span class="reserva__info-val">Martes – Domingo<br/>18:00 – 02:00</span>
+        </div>
+        <div class="reserva__info-row">
+          <span class="reserva__info-key">Email</span>
+          <span class="reserva__info-val"><a href="mailto:hola@soberana.es">hola@soberana.es</a></span>
+        </div>
+        <div class="reserva__info-row">
+          <span class="reserva__info-key">Teléfono</span>
+          <span class="reserva__info-val"><a href="tel:+34600000000">+34 600 000 000</a></span>
+        </div>
+      </div>
+    </div>
+    <form class="form reveal d1" novalidate>
+      <div class="form__row">
+        <div class="form__field"><label class="form__label" for="nombre">Nombre</label><input class="form__input" type="text" id="nombre" placeholder="Tu nombre" required /></div>
+        <div class="form__field"><label class="form__label" for="email">Email</label><input class="form__input" type="email" id="email" placeholder="tu@email.com" required /></div>
+      </div>
+      <div class="form__row">
+        <div class="form__field"><label class="form__label" for="fecha">Fecha</label><input class="form__input" type="date" id="fecha" required /></div>
+        <div class="form__field">
+          <label class="form__label" for="personas">Personas</label>
+          <select class="form__select" id="personas">
+            <option value="">Número</option>
+            <option>1</option><option>2</option><option>3–4</option><option>5–6</option><option>7+</option>
+          </select>
+        </div>
+      </div>
+      <div class="form__field"><label class="form__label" for="notas">Notas</label><textarea class="form__textarea" id="notas" placeholder="Alergias, ocasión especial, pedido de producto…"></textarea></div>
+      <button type="submit" class="form__submit">Enviar reserva</button>
+    </form>
+  </section>
+
+  <!-- PANEL 8: FOOTER -->
+  <footer class="h-panel footer-panel">
+    <div class="footer__top">
+      <div>
+        <div class="footer__logo">
+          <svg viewBox="0 0 887.25 193.87" xmlns="http://www.w3.org/2000/svg">
+            <g fill="currentColor">
+              <path d="M37.01,147.79c-6.26-2.05-11.85-4.94-16.76-8.69v-20.89h.88c4.68,6.67,10,11.7,15.97,15.09,5.97,3.4,12.29,5.09,18.96,5.09,4.45,0,8.57-.79,12.37-2.37,3.8-1.58,6.82-3.86,9.04-6.85,2.22-2.98,3.33-6.58,3.33-10.79s-1.29-7.75-3.86-10.62c-2.58-2.87-6.73-5.59-12.46-8.16l-17.03-7.55c-8.19-3.74-14.28-8.34-18.25-13.78-3.98-5.44-5.97-11.61-5.97-18.52,0-6.43,1.76-12.34,5.27-17.73,3.51-5.38,8.4-9.62,14.66-12.73,6.26-3.1,13.31-4.65,21.15-4.65,5.85,0,11.44.76,16.76,2.28,5.32,1.52,9.86,3.51,13.6,5.97v20.19h-.88c-3.4-5.38-7.64-9.42-12.73-12.11-5.09-2.69-10.62-4.04-16.59-4.04-7.14,0-12.99,1.73-17.55,5.18-4.56,3.45-6.85,8.28-6.85,14.48,0,3.98,1.2,7.52,3.6,10.62,2.4,3.1,6.35,5.88,11.85,8.34l17.38,7.9c8.42,3.86,14.71,8.31,18.87,13.34,4.15,5.03,6.23,11.18,6.23,18.43s-1.84,13.05-5.53,18.43c-3.69,5.38-8.72,9.6-15.1,12.64-6.38,3.04-13.43,4.56-21.15,4.56-6.55,0-12.96-1.03-19.22-3.07Z"/>
+              <path d="M121.25,69.41v36.7h-2.03c-9.15,0-14.23-6.46-14.23-18.09v-.52c0-11.63,5.08-18.09,14.23-18.09h2.03ZM137.52,48.74v2.58c0,11.63-5.09,18.09-14.23,18.09h-2.03v-2.58c0-11.63,5.08-18.09,14.23-18.09h2.04ZM135.49,126.79c-9.15,0-14.23-6.46-14.23-18.09v-2.58h2.03c9.15,0,14.23,6.46,14.23,18.09v2.58h-2.04ZM180.21,26.77c9.15,0,14.23,6.46,14.23,18.09v3.88h-56.93v-3.88c0-11.63,5.08-18.09,14.23-18.09h28.46ZM194.45,126.79v3.88c0,11.63-5.08,18.09-14.23,18.09h-28.46c-9.15,0-14.23-6.46-14.23-18.09v-3.88h56.93ZM196.48,48.74c9.15,0,14.23,6.46,14.23,18.09v2.58h-2.03c-9.15,0-14.23-6.46-14.23-18.09v-2.58h2.03ZM210.71,106.11v2.58c0,11.63-5.08,18.09-14.23,18.09h-2.03v-2.58c0-11.63,5.08-18.09,14.23-18.09h2.03ZM212.75,69.41c9.15,0,14.23,6.46,14.23,18.09v.52c0,11.63-5.08,18.09-14.23,18.09h-2.03v-36.7h2.03Z"/>
+              <path d="M149.35,105.4c.64-13.22,8.9-24.6,20.08-31.06,3.99-2.21,8.5-3.85,13.19-4.22-.09,4.71-1.47,9.31-3.44,13.42-5.8,11.54-16.67,20.45-29.83,21.86h0Z"/>
+            </g>
+          </svg>
+        </div>
+        <p class="footer__tagline">Bar de mocktails premium en Madrid.<br/>Libre de lo que enturbia.</p>
+      </div>
+      <div>
+        <p class="footer__col-head">Navegación</p>
+        <ul class="footer__col-list">
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Producto</p>
+        <ul class="footer__col-list">
+          <li><a href="#carta">Mocktails en barra</a></li>
+          <li><a href="#reserva">Prêt-à-porter</a></li>
+          <li><a href="#reserva">Eventos privados</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Legal</p>
+        <ul class="footer__col-list">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Soberana · Malasaña, Madrid</p>
+      <div class="footer__social">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="mailto:hola@soberana.es">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- fin h-scroll -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
