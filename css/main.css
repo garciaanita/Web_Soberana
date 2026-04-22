@@ -56,7 +56,6 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
   height: 100vh;
   overflow-x: scroll;
   overflow-y: hidden;
-  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
