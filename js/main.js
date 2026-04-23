@@ -27,40 +27,55 @@ document.addEventListener('DOMContentLoaded', () => {
     hScroll.addEventListener('scroll', () => {
       nav.classList.toggle('is-scrolled', hScroll.scrollLeft > 60 || hScroll.scrollTop > 60);
     }, { passive: true });
-
-    // Panel-by-panel navigation with momentum-safe lock
-    let wheelLock = false;
-    let wheelEndTimer = null;
-
-    hScroll.addEventListener('wheel', e => {
-      if (window.innerWidth <= 768) return;
-      e.preventDefault();
-
-      // Reset lock only when wheel events stop for 400ms (end of trackpad momentum)
-      clearTimeout(wheelEndTimer);
-      wheelEndTimer = setTimeout(() => { wheelLock = false; }, 400);
-
-      if (wheelLock) return;
-
-      const dir = (e.deltaY || e.deltaX) > 0 ? 1 : -1;
-      const panels = [...hScroll.querySelectorAll('.h-panel')];
-
-      let currentIdx = 0, minDist = Infinity;
-      panels.forEach((p, i) => {
-        const dist = Math.abs(p.getBoundingClientRect().left);
-        if (dist < minDist) { minDist = dist; currentIdx = i; }
-      });
-
-      const nextIdx = Math.max(0, Math.min(panels.length - 1, currentIdx + dir));
-      if (nextIdx === currentIdx) return;
-
-      wheelLock = true;
-      hScroll.scrollTo({
-        left: hScroll.scrollLeft + panels[nextIdx].getBoundingClientRect().left,
-        behavior: 'smooth'
-      });
-    }, { passive: false });
   }
+
+  // Wheel listener en window para capturar eventos sobre cualquier parte
+  // de la pantalla (incluido el nav fixed que es hermano de hScroll en el DOM)
+  let wheelLock = false;
+  let wheelEndTimer = null;
+
+  window.addEventListener('wheel', e => {
+    if (window.innerWidth <= 768 || !hScroll) return;
+
+    const panels = [...hScroll.querySelectorAll('.h-panel')];
+
+    // Panel actualmente visible: el cuyo borde izquierdo está más cerca de x=0
+    let currentIdx = 0, minDist = Infinity, currentPanel = panels[0];
+    panels.forEach((p, i) => {
+      const dist = Math.abs(p.getBoundingClientRect().left);
+      if (dist < minDist) { minDist = dist; currentIdx = i; currentPanel = p; }
+    });
+
+    // Eje dominante: evita que un deltaY residual pequeño sobreescriba un deltaX real
+    const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    if (delta === 0) return;
+    const dir = delta > 0 ? 1 : -1;
+
+    // Si el panel actual tiene scroll vertical (ej. Carta), dejar que scrollee
+    // hasta que llegue al límite; entonces navegar horizontalmente
+    if (currentPanel.scrollHeight > currentPanel.clientHeight + 5) {
+      const atTop    = currentPanel.scrollTop <= 0;
+      const atBottom = currentPanel.scrollTop + currentPanel.clientHeight >= currentPanel.scrollHeight - 5;
+      if (!((dir > 0 && atBottom) || (dir < 0 && atTop))) return;
+    }
+
+    e.preventDefault();
+
+    // Reiniciar lock 400ms después del último evento wheel (fin del momentum)
+    clearTimeout(wheelEndTimer);
+    wheelEndTimer = setTimeout(() => { wheelLock = false; }, 400);
+
+    if (wheelLock) return;
+
+    const nextIdx = Math.max(0, Math.min(panels.length - 1, currentIdx + dir));
+    if (nextIdx === currentIdx) return;
+
+    wheelLock = true;
+    hScroll.scrollTo({
+      left: hScroll.scrollLeft + panels[nextIdx].getBoundingClientRect().left,
+      behavior: 'smooth'
+    });
+  }, { passive: false });
 
   // MOBILE MENU
   const burger = document.querySelector('.nav__burger');
