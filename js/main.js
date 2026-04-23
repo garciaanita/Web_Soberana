@@ -58,27 +58,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('wheel', e => {
     if (window.innerWidth <= 768 || !hScroll) return;
-    e.preventDefault();
 
-    // El lock se libera 400 ms después del ÚLTIMO evento wheel
-    // (fin real del gesto incluido el momentum del trackpad)
-    clearTimeout(wheelEndTimer);
-    wheelEndTimer = setTimeout(() => { wheelLock = false; }, 400);
+    const panels = [...hScroll.querySelectorAll('.h-panel')];
+    let currentIdx = 0, minDist = Infinity, currentPanel = panels[0];
+    panels.forEach((p, i) => {
+      const d = Math.abs(p.getBoundingClientRect().left);
+      if (d < minDist) { minDist = d; currentIdx = i; currentPanel = p; }
+    });
 
-    if (wheelLock) return;
-
-    // Eje dominante: evita que un deltaY residual mínimo
-    // sobreescriba un gesto horizontal real en deltaX
+    // Eje dominante
     const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
     if (delta === 0) return;
     const dir = delta > 0 ? 1 : -1;
 
-    const panels = [...hScroll.querySelectorAll('.h-panel')];
-    let currentIdx = 0, minDist = Infinity;
-    panels.forEach((p, i) => {
-      const d = Math.abs(p.getBoundingClientRect().left);
-      if (d < minDist) { minDist = d; currentIdx = i; }
-    });
+    // Si el gesto es vertical y el panel tiene scroll vertical pendiente,
+    // dejar que el navegador lo gestione (ej. lista de Carta)
+    const isVertical = Math.abs(e.deltaY) >= Math.abs(e.deltaX);
+    if (isVertical && currentPanel.scrollHeight > currentPanel.clientHeight + 5) {
+      const atTop    = currentPanel.scrollTop <= 0;
+      const atBottom = currentPanel.scrollTop + currentPanel.clientHeight >= currentPanel.scrollHeight - 5;
+      if (!((dir > 0 && atBottom) || (dir < 0 && atTop))) return;
+    }
+
+    e.preventDefault();
+
+    clearTimeout(wheelEndTimer);
+    wheelEndTimer = setTimeout(() => { wheelLock = false; }, 400);
+
+    if (wheelLock) return;
 
     const nextIdx = Math.max(0, Math.min(panels.length - 1, currentIdx + dir));
     if (nextIdx === currentIdx) return;
