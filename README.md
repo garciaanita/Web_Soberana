@@ -13,7 +13,7 @@ Sitio web del bar de mocktails premium **Soberana**, ubicado en Madrid. Desarrol
 | Maquetación | HTML5 semántico |
 | Estilos | CSS3 — custom properties, Grid, Flexbox, `clamp()` |
 | Interacción | JavaScript ES6+ vanilla |
-| Tipografía | Google Fonts — Cormorant Garamond + DM Mono |
+| Tipografía | Fuentes locales ABC Fonts (Arizona Flare, Favorit Georgian, Diatype Greek Mono) |
 | Animaciones | `requestAnimationFrame` con easing propio |
 | Control de visibilidad | `IntersectionObserver` |
 
@@ -112,7 +112,7 @@ python3 -m http.server 8080
 npx serve .
 ```
 
-> ⚠️ Abrir `index.html` directamente como archivo (`file://`) puede bloquear la carga de las fuentes de Google Fonts por políticas CORS del navegador.
+> ⚠️ Abrir `index.html` directamente como archivo (`file://`) puede causar que el navegador bloquee la carga de fuentes locales por políticas de seguridad. Se recomienda usar un servidor local.
 
 ---
 
