@@ -3,6 +3,35 @@
    Editorial · Analógico · Minimal · Scroll Horizontal
    ============================================================ */
 
+/* FUENTES LOCALES */
+@font-face {
+  font-family: 'ABC Arizona Flare';
+  src: url('../assets/fonts/ABCArizonaFlareVariable-Trial.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ABC Favorit Georgian';
+  src: url('../assets/fonts/ABCFavoritGeorgianVariable-Trial.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ABC Diatype Greek Mono';
+  src: url('../assets/fonts/ABCDiatypeGreekMono-Light-Trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ABC Diatype Greek Mono';
+  src: url('../assets/fonts/ABCDiatypeGreekMono-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --negro:    #231F20;
@@ -11,8 +40,9 @@
   --topo-20:  rgba(121,113,108,0.2);
   --topo-08:  rgba(121,113,108,0.08);
   --lima:     #DFDF66;
-  --ff-serif: 'Cormorant Garamond', Georgia, serif;
-  --ff-mono:  'DM Mono', 'Courier New', monospace;
+  --ff-serif: 'ABC Arizona Flare',    Georgia, serif;
+  --ff-sans:  'ABC Favorit Georgian', system-ui, sans-serif;
+  --ff-mono:  'ABC Diatype Greek Mono', 'Courier New', monospace;
   --ease:     cubic-bezier(0.16, 1, 0.3, 1);
   --pad:      clamp(24px, 5vw, 80px);
 }
@@ -24,7 +54,7 @@ html, body { height: 100%; overflow: hidden; }
 body {
   background: var(--crema);
   color: var(--negro);
-  font-family: var(--ff-mono);
+  font-family: var(--ff-sans);
   font-weight: 300;
   font-size: 13px;
   line-height: 1.7;
