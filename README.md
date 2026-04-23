@@ -1,6 +1,6 @@
 # Soberana — Bar de Mocktails · Madrid
 
-Sitio web del bar de mocktails premium **Soberana**, ubicado en Malasaña, Madrid. Desarrollado como Trabajo de Fin de Grado (TFG) en ESNE. Construido íntegramente con HTML, CSS y JavaScript vanilla, sin frameworks ni dependencias externas.
+Sitio web del bar de mocktails premium **Soberana**, ubicado en Madrid. Desarrollado como Trabajo de Fin de Grado (TFG) en ESNE. Construido íntegramente con HTML, CSS y JavaScript vanilla, sin frameworks ni dependencias externas.
 
 🔗 **Repositorio:** [github.com/garciaanita/Web_Soberana](https://github.com/garciaanita/Web_Soberana)
 
