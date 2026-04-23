@@ -71,10 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (delta === 0) return;
     const dir = delta > 0 ? 1 : -1;
 
-    // Si el gesto es vertical y el panel tiene scroll vertical pendiente,
-    // dejar que el navegador lo gestione (ej. lista de Carta)
+    // Si el gesto es vertical y el panel PUEDE scrollear verticalmente
+    // (overflow auto/scroll, no hidden), dejar que el navegador lo gestione
     const isVertical = Math.abs(e.deltaY) >= Math.abs(e.deltaX);
-    if (isVertical && currentPanel.scrollHeight > currentPanel.clientHeight + 5) {
+    const overflowY  = getComputedStyle(currentPanel).overflowY;
+    const canScroll  = (overflowY === 'auto' || overflowY === 'scroll')
+                    && currentPanel.scrollHeight > currentPanel.clientHeight + 5;
+    if (isVertical && canScroll) {
       const atTop    = currentPanel.scrollTop <= 0;
       const atBottom = currentPanel.scrollTop + currentPanel.clientHeight >= currentPanel.scrollHeight - 5;
       if (!((dir > 0 && atBottom) || (dir < 0 && atTop))) return;
