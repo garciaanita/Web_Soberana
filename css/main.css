@@ -39,16 +39,16 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 .cursor {
   position: fixed;
   width: 6px; height: 6px;
-  background: var(--negro);
+  background: #fff;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   will-change: transform;
   transform: translate(-50%,-50%) translateZ(0);
   transition: width .3s var(--ease), height .3s var(--ease);
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
 }
-.cursor.expand { width: 36px; height: 36px; background: var(--crema); }
+.cursor.expand { width: 36px; height: 36px; background: #fff; }
 
 /* HORIZONTAL SCROLL */
 .h-scroll {
